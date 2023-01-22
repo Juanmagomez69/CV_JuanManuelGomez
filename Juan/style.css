@@ -1,0 +1,125 @@
+:root{
+    --fondo:#FFFFFF;
+    --main:rgb(203, 218, 218);
+    --gris:rgb(163, 206, 207);
+}
+
+/* Globales */
+
+body {
+    font-size: 62.5%;
+    box-sizing: border-box; /*snipet*/
+    /* Hack para box model */
+    scroll-snap-type: y mandatory;
+    background-color: var(--fondo);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    font-size: 16px; /* 1rem = 10px */
+    font-family:'Krub',sans-serif;
+}
+
+#navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content:space-around;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+header img {
+    display: block;
+    width: 15%;
+    height: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px; /* 1rem = 10px */
+    font-family:'Krub',sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px; /* 1rem = 10px */
+    font-family:'Krub',sans-serif;
+}
+
+p {
+    text-align: center;
+    font-size: 15px; /* 1rem = 10px */
+    font-family:'Krub',sans-serif;
+}
+
+a {
+    font-size: 15px; /* 1rem = 10px */
+    font-family:'Krub',sans-serif;
+}
+
+button {
+    border-radius:15%;
+}
+
+footer {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* Modo Dia/Noche */
+
+.darkModeSwitch{
+    background: #113528;
+    display:flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.darkModeSwitch span{
+    width:30px;
+    height:15px;
+    line-height:30px;
+    display:block;
+    color:#fff;
+
+    background: none;
+}
+.darkModeSwitch::after{
+    display:block;
+    background: #042d26de;
+    width: 1.9rem;
+    height: 1.9rem;
+    position: absolute;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius: 3rem;
+    transition: all .5s ease;
+
+    content: "";
+}
+.darkModeSwitch.active{
+  background: #030e2a;
+}
+.darkModeSwitch.active::after{
+  left:unset;
+  right:0;
+}
+
+body.dark {   background:  #333; }
+
+body.dark h1 {   color:#fff}
+body.dark h2 {   color:#fff}
+body.dark p {   color:#fff}
+body.dark a {   color:#fff}
